@@ -48,6 +48,10 @@ sys.getrefcount(object) #-- Returns the reference count of the object.
 
 # Shelve & pickle
 
+`pickle` is for serializing some object (or objects) as a single bytestream in a file.
+
+`shelve` builds on top of pickle and implements a serialization dictionary where objects are pickled, but associated with a key (some string), so you can load your shelved data file and access your pickled objects via keys. This could be more convenient were you to be serializing many objects.
+
 ```
 import pickle
 integers = [1, 2, 3, 4, 5]
