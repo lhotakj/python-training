@@ -72,13 +72,11 @@ The above should output `[1, 2, 3, 4, 5]`.
 shelve Example
 import shelve
 
-```
 integers = [1, 2, 3, 4, 5]
 with shelve.open('shelf-example', 'c') as shelf:
     shelf['ints'] = integers
 ```
 Notice how you add objects to the shelf via dictionary-like access.
-
 Read the object back in with code like the following:
 
 ```
