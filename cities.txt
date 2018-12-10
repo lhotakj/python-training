@@ -1,4 +1,5 @@
 CZ,Praha
+CZ,Usti nad label
 CZ,Brno
 SK,Bratislava
 AT,Viena
