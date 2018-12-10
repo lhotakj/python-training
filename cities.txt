@@ -1,0 +1,6 @@
+CZ,Praha
+CZ,Brno
+SK,Bratislava
+AT,Viena
+DE,Berlin
+PL,Warsaw
