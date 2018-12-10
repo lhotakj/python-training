@@ -46,3 +46,52 @@ import sys
 sys.getrefcount(object) #-- Returns the reference count of the object.
 ```
 
+*Shelve & pickle*
+
+```
+import pickle
+integers = [1, 2, 3, 4, 5]
+
+with open('pickle-example.p', 'wb') as pfile:
+    pickle.dump(integers, pfile)
+```
+This will dump the integers list to a binary file called pickle-example.p.
+
+Now try reading the pickled file back.
+
+```
+import pickle
+
+with open('pickle-example.p', 'rb') as pfile:
+    integers = pickle.load(pfile)
+    print integers
+```
+The above should output `[1, 2, 3, 4, 5]`.
+
+```
+shelve Example
+import shelve
+
+```
+integers = [1, 2, 3, 4, 5]
+\# If you're using Python 2.7, import contextlib and use
+\# the line:
+\# with contextlib.closing(shelve.open('shelf-example', 'c')) as shelf:
+with shelve.open('shelf-example', 'c') as shelf:
+    shelf['ints'] = integers
+```
+Notice how you add objects to the shelf via dictionary-like access.
+
+Read the object back in with code like the following:
+
+```
+import shelve
+\# If you're using Python 2.7, import contextlib and use
+\# the line:
+\# with contextlib.closing(shelve.open('shelf-example', 'r')) as shelf:
+with shelve.open('shelf-example', 'r') as shelf:
+    for key in shelf.keys():
+        print(repr(key), repr(shelf[key])))
+```
+The output will be `'ints', [1, 2, 3, 4, 5]`.
+
