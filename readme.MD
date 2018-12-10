@@ -30,7 +30,7 @@ Kdyz napisu jen promemou zavola se `__repr__`! Wrapper
 Compound statements: if, else, elif
 
 *List comprehension*
-Generovani seznamu, slicing l[1:3:krok] ...
+Generovani seznamu, slicing  `l[1:3:krok]` ...
 
 ```
 i = 1
