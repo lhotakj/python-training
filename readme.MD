@@ -120,7 +120,7 @@ Old way in python2.7 `@asyncio.coroutine`
 ![img](/pdf/tulip_coro.png)
 
 # Meta class
-Used like for factory!
+Metaclasses are the 'stuff' that creates classes. Used as *class factories*!
 
 ```
 class X():
