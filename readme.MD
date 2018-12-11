@@ -168,7 +168,9 @@ print('dir(f):        ' + str(dir(f)))
 Basic module `threads` but it runs in fact only one thread at some time (due to *global interpreter lock* aka *GIL*) https://wiki.python.org/moin/GlobalInterpreterLock. Instead of it use `threading` which has better options, or `from multiprocessing import Process`
 
 See [thread3.py](official/thread3.py) for usahe `from multiprocessing import Process`
+
 Or [thread4.py](official/thread4.py)
+
 Shared resources, using lock [thread5.py](official/thread5.py)
 
 
