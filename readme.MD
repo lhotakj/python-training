@@ -143,15 +143,21 @@ yy=y()
 type(yy)  
 # <class '__main__.X'>
 ```
-alse it's build-in function `type`!
+
+Note we can use alseo build-in function `type`!
 
 ```
-factory=type('Factory',(),{})
-print(factory)
-print(type(factory))
+# define factory
+print('-- create factory -------------')
+factory = type('Factory',(),{})
+
+print('factory :      ' + str(factory))
+print('type(factory): ' + str(type(factory)))
+
+print('\n-- create instance -------------')
 f=factory()
-print(f)
-print(type(f))
+print('f :            ' + str(f))
+print('type(f):       ' + str(type(f)))
 ```
 
 
