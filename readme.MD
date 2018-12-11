@@ -164,6 +164,10 @@ print('dir(f):        ' + str(dir(f)))
 
 ```
 
+# Parallel programminmg
+Basic module `threads` but it runs in fact only one thread at some time (due to *global interpreter lock* aka *GIL*) https://wiki.python.org/moin/GlobalInterpreterLock. Instead of it use `threading` which has better options
+see [official/thread3.py]
+
 
 
 
