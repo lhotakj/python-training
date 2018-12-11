@@ -114,7 +114,9 @@ l
 # returns [10, 20]
 for i in x() print i
 ```
+Note that cpython doesn't do well threads (shared memory!)
+Old way in python2.7 `@asyncio.coroutine`
 
 ![img](/pdf/tulip_coro.png)
 
-`@asyncio.coroutine`
+
