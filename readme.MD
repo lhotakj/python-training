@@ -161,6 +161,7 @@ print('type(f):       ' + str(type(f)))
 print('dir(f):        ' + str(dir(f)))
 
 # in f() exists propety 'param1'
+
 ```
 
 
