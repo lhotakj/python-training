@@ -119,4 +119,31 @@ Old way in python2.7 `@asyncio.coroutine`
 
 ![img](/pdf/tulip_coro.png)
 
+# Meta class
+Used like for factory!
+
+```
+class X():
+    pass
+
+def f1():
+    x=X()
+    return x
+
+def f2()
+    return X
+y = f()
+type(y)
+# <class '__main__.X'>
+y = f2()
+type(y)
+# <class 'type'> ===> metaclass
+
+yy=y()
+type(yy)  
+# <class '__main__.X'>
+```
+
+
+
 
