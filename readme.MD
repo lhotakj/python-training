@@ -94,7 +94,7 @@ The output will be `'ints', [1, 2, 3, 4, 5]`.
 # Coroutines
 Coroutines are functions whose processing can be suspended and resumed at specific points. So, typically, a coroutine will execute up to a certain statement, then suspend execution while waiting for some data. At this point other parts of the program can continue to execute (usually other coroutines that aren’t suspended). 
 
-I can *write* into couroutines, only *read* from generators.
+I can *write* into couroutines using `.send()`, but generators are for *read* only
 Leads to multi-thread porgramming, *waiting* = `yeild` 
 It's like a function with `return` but wrapped into an iterable envelope!!
 
