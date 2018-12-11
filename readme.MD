@@ -91,3 +91,25 @@ with shelve.open('shelf-example', 'r') as shelf:
 ```
 The output will be `'ints', [1, 2, 3, 4, 5]`.
 
+# Coroutines
+Coroutines are functions whose processing can be suspended and resumed at specific points. So, typically, a coroutine will execute up to a certain statement, then suspend execution while waiting for some data. At this point other parts of the program can continue to execute (usually other coroutines that aren’t suspended). 
+
+Leads to multi-thread porgramming, *waiting* = `yeild` 
+
+```
+def x():
+    yield 10
+    yield 20
+y=x()
+next(y)
+\# returns 10
+next(y)
+\# returns 20
+l=[x()]
+\#returns generator object
+l=list(x())
+l
+\# return [10, 20]
+for i in x() print i
+```
+
