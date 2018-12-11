@@ -143,6 +143,16 @@ yy=y()
 type(yy)  
 # <class '__main__.X'>
 ```
+alse it's build-in function `type`!
+
+```
+factory=type('Factory',(),{})
+print(factory)
+print(type(factory))
+f=factory()
+print(f)
+print(type(f))
+```
 
 
 
