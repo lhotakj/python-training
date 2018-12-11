@@ -171,7 +171,11 @@ See [thread3.py](official/thread3.py) for usahe `from multiprocessing import Pro
 
 Or [thread4.py](official/thread4.py)
 
-Shared resources, using lock [thread5.py](official/thread5.py)
+Using lock [thread5.py](official/thread5.py)
+
+Using lock and shared valuye [thread6.py](official/thread6.py)
+
+
 
 
 
