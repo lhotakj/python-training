@@ -115,6 +115,6 @@ l
 for i in x() print i
 ```
 
-(https://github.com/lhotakj/python-training/blob/master/pdf/tulip_coro.png)
+![img](/pdf/tulip_coro.png)
 
 `@asyncio.coroutine`
