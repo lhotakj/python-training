@@ -9,7 +9,7 @@ x = f1('cau')
 print(type(x))
 # <class 'function'>
 
-print x()
+print(x())
 # cau
 
 print(f1('xxx'))

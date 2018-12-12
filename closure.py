@@ -7,7 +7,7 @@ def f1():
 
 # error - no binding for nonlocal 'a' found ;)
 
-f1():
+def f1():
     b=123
     def f2():
         nonlocal b
