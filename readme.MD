@@ -38,6 +38,8 @@ until(10, lambda x: x%3==0 or x%5==0, 0)
 `map()` returns `list` type.
 Reduce to 1.
 
+Interesting article [comprehension](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Comprehensions.html)
+
 
 *REPL*:
 Read Evaluate Print Loop - terminal :)
