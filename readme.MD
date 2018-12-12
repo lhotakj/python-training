@@ -1,3 +1,41 @@
+# Python
+Python is a [multi-paradigm programming language](https://en.wikipedia.org/wiki/Multi-paradigm_programming_language).
+Supports *OOP* & *imperative* & *functional*. Examples: [official/funtional1.py](official/funtional1.py)
+
+_Imperative_ (procedual) :
+```
+s = 0
+for n in range(1, 10):
+    if n%==0 or n%==0:
+        s+=m
+print(s)
+```
+
+_OOP_:
+```
+m=list()
+for n in range(1, 10):
+  if n%3==0 or n%5==0:
+    m.append(n)
+print(sum(m))
+```
+
+_Functional_: (build functions and then call them)
+```
+#functional
+def until(n, filter_func, v):
+  if v == n:
+    return []
+  if filter_func(v):
+    return [v] + until( n, filter_func, v+1 )
+  else:
+    return until(n, filter_func, v+1)
+
+mult_3_5= lambda x: x%3==0 or x%5==0
+until(10, lambda x: x%3==0 or x%5==0, 0)
+```
+
+
 *REPL*:
 Read Evaluate Print Loop - terminal :)
 
