@@ -236,6 +236,29 @@ print(x())
 ```
 ```
 
+# Functional Style Programming
+- *Mapping* 
+- *Filter* - for map comprehension
+- *Reduce* - not in build-in `import functtools.reduce` `sum()` is in fact reduce. `min()` `max()`
+```
+import functtools
+functtools.reduce
+```
 
+## List Comprehensions
+A list comprehension consists of the following parts:
+
+- An Input Sequence.
+- A Variable representing members of the input sequence.
+- An Optional Predicate expression.
+- An Output Expression producing elements of the output list from members of the Input Sequence that satisfy the predicate.
+Say we need to obtain a list of all the integers in a sequence and then square them:
+
+```
+a_list = [1, ‘4’, 9, ‘a’, 0, 4]
+squared_ints = [ e**2 for e in a_list if type(e) == types.IntType ]
+print squared_ints
+# [ 1, 81, 0, 16 ]
+```
 
 
