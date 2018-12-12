@@ -240,16 +240,18 @@ print(type(x))
 print(x())
 # returns cau -- closure!
 ```
-```
+
 
 # Functional Style Programming
 - *Mapping* 
 - *Filter* - for map comprehension
 - *Reduce* - not in build-in `import functtools.reduce` `sum()` is in fact reduce. `min()` `max()`
+
 ```
 import functtools
-functtools.reduce
+functtools.reduce([operator]...)
 ```
+
 
 ## List Comprehensions
 A list comprehension consists of the following parts:
