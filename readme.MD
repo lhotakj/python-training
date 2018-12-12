@@ -269,4 +269,9 @@ print squared_ints
 # [ 1, 81, 0, 16 ]
 ```
 
+## UI
+Use PyQ desinger https://www.tutorialspoint.com/pyqt/pyqt_using_qt_designer.htm
+create ui > pyui `pyuic4 –x <...>.ui –o <...>.py`
+`pip install pyqt`
+the just run :) 
 
