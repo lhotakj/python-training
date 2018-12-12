@@ -36,10 +36,11 @@ until(10, lambda x: x%3==0 or x%5==0, 0)
 ```
 
 `map()` returns `list` type.
-Reduce to 1.
+When I use `reduce()` it's functional ;)
 
 Interesting article [comprehension](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Comprehensions.html)
 
+---
 
 *REPL*:
 Read Evaluate Print Loop - terminal :)
@@ -239,16 +240,18 @@ print(type(x))
 print(x())
 # returns cau -- closure!
 ```
-```
+
 
 # Functional Style Programming
 - *Mapping* 
 - *Filter* - for map comprehension
 - *Reduce* - not in build-in `import functtools.reduce` `sum()` is in fact reduce. `min()` `max()`
+
 ```
 import functtools
-functtools.reduce
+functtools.reduce([operator]...)
 ```
+
 
 ## List Comprehensions
 A list comprehension consists of the following parts:
@@ -266,4 +269,9 @@ print squared_ints
 # [ 1, 81, 0, 16 ]
 ```
 
+## UI
+Use PyQ desinger https://www.tutorialspoint.com/pyqt/pyqt_using_qt_designer.htm
+create ui > pyui `pyuic4 –x <...>.ui –o <...>.py`
+`pip install pyqt`
+the just run :) 
 
