@@ -1,5 +1,8 @@
 import os
+
+__spec__ = None
 from multiprocessing import Process 
+__spec__ = None
 import time
 def f():
   print(os.getpid(), ": zacatek...")

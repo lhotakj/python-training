@@ -1,4 +1,5 @@
 from multiprocessing import Process, Lock, Value
+__spec__ = None
 import time
 def f(l, x):
   l.acquire()

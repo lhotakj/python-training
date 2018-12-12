@@ -1,6 +1,10 @@
 import os
 from multiprocessing import Process, Lock
 import time
+
+
+__spec__ = None
+
 def f(l):
   print(os.getpid(), ": zacatek ...")
   l.acquire()
