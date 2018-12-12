@@ -181,7 +181,21 @@ Using lock and shared valuye [thread6.py](official/thread6.py)
 The `nonlocal` statement causes the listed identifiers to refer to previously bound variables in the nearest enclosing scope excluding globals. This is important because the default behavior for binding is to search the local namespace first. The statement allows encapsulated code to rebind variables outside of the local scope besides the global (module) scope.
 
 Names listed in a `nonlocal` statement, unlike those listed in a global statement, must refer to pre-existing bindings in an enclosing scope (the scope in which a new binding should be created cannot be determined unambiguously).
+```
+# de facto decorator
+def f1(p):
+    def f2():
+        print(p)
+    return f2()
 
+x = f1('cau')
+print(type(x))
+# <class 'function'>
+
+print(x())
+# returns cau -- closure!
+```
+```
 
 
 
