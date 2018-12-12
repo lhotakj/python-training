@@ -35,6 +35,9 @@ mult_3_5= lambda x: x%3==0 or x%5==0
 until(10, lambda x: x%3==0 or x%5==0, 0)
 ```
 
+`map()` returns `list` type.
+Reduce to 1.
+
 
 *REPL*:
 Read Evaluate Print Loop - terminal :)
