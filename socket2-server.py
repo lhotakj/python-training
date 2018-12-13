@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+import sys
 import socket
 from datetime import datetime
 
@@ -34,7 +37,7 @@ def server_program():
     host = socket.gethostname()
     port = 5000  # initiate port no above 1024
 
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # get instance
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # get the instance
     server_socket.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 
     # look closely. The bind() function takes tuple as argument
@@ -43,35 +46,62 @@ def server_program():
     # configure how many client the server can listen simultaneously
     server_socket.listen(5)
 
-    conn, address = server_socket.accept()  # accept new connection
+    sys.stderr.write('Server up and running and waiting on {port} ... \n'.format(port=str(port)))
+    sys.stdout.flush()
 
     storage = Storage()
 
-    print("Connection from: " + str(address))
     while True:
-        # receive data stream. it won't accept data packet greater than 1024 bytes
-        data = recvall(conn)
-        #print(storage.Dump())
-        #if not data:
-        #    break
 
-        if data.startswith("D"):
-            conn.send(str(storage.Dump()).encode())  # send data to the client
-        elif data.startswith("S"):
-            data = data[1:]
-            lines = data.split("\n")
-            storage.Set(lines[0], lines[1])
-            conn.send(("SET: " + data).encode())  # send data to the client
-        elif data.startswith("G"):
-            data = data[1:-1]
-            #print("getting '" + data + "'")
-            r = storage.Get(data)
-            conn.send(("GET: " + r).encode())  # send data to the client
-        elif data.startswith("Q"):
-            break
+        try:
 
-    print("exiting")
-    conn.close()  # close the connection
+            conn, address = server_socket.accept()  # accept new connection
+
+            sys.stdout.write("Connection from: " + str(address) + "\n")
+            sys.stdout.flush()
+
+            # receive data stream.
+            data = recvall(conn)
+            #sys.stdout.write("Received: " + str(data).replace("\n","|") + "\n")
+
+            #print(storage.Dump())
+            #if not data:
+            #    break
+
+            if data.startswith("D"):
+                conn.send(str("0\n" + str(storage.Dump())).encode())  # send data to the client
+            elif data.startswith("S"):
+                data = data[1:]
+                lines = data.split("\n")
+                storage.Set(lines[0], lines[1])
+                sys.stdout.write("SET {key} \n".format(key=lines[0]))
+                sys.stdout.flush()
+                conn.send(("0\n" + data).encode())  # send data to the client
+            elif data.startswith("G"):
+                data = data[1:-1]
+                sys.stdout.write("GET {key} \n".format(key=data))
+                sys.stdout.flush()
+                r = storage.Get(data)
+                conn.send(("0\n" + r).encode())  # send data to the client
+            elif data.startswith("Q"):
+                conn.send(("0\n" + data).encode())  # send data to the client
+                sys.stdout.write("QUIT\n")
+                sys.stdout.flush()
+                conn.close()  # close the connection
+                sys.stdout.write("Shutting down server ...\n")
+                sys.stdout.flush()
+                break
+
+        except KeyboardInterrupt:
+            sys.stdout.write("[CTRL+C detected]\n")
+            sys.stdout.flush()
+            conn.close()
+            sys.stdout.write("Shutting down server ...\n")
+            sys.stdout.flush()
+            exit()
+
+        finally:
+            conn.close()
 
 
 if __name__ == '__main__':
