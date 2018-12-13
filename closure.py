@@ -8,7 +8,7 @@ def f1():
 # error - no binding for nonlocal 'a' found ;)
 
 def f1():
-    b=123
+    b = 123
     def f2():
         nonlocal b
         pass

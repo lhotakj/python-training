@@ -1,5 +1,5 @@
 import re
-import asyncio #old in 2.7
+import asyncio  # old in 2.7
 
 # pattern filter ---------------
 
@@ -13,7 +13,7 @@ def regex_matcher(regex):
 
 regex = re.compile('a+')
 r = regex_matcher(regex)
-x=next(r)
+x = next(r)
 r.send('anaaconda')
 r.send('ahoj')
 r.send('pakarna')

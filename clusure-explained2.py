@@ -7,8 +7,8 @@ def nasobek_n(n):
     return inner()
 
 
-krat3=nasobek_n(3)
-krat5=nasobek_n(5)
+krat3 = nasobek_n(3)
+krat5 = nasobek_n(5)
 
 print(krat3(7))
 # 21

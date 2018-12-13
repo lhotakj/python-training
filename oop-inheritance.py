@@ -45,7 +45,7 @@ class B(A):
 class C(A):
     pass
 
-class D(B,C):
+class D(B, C):
     pass
 
 print(D.mro())
@@ -71,4 +71,4 @@ class C(A, B):
         B.__init__(self, age)
 
 
-c = C("Jan",50)
+c = C("Jan", 50)

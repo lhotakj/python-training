@@ -24,5 +24,5 @@ meta_class = class_factory(False)
 y = meta_class("petr")
 print(y)
 
-print(class_factory.__code__.co_argcount) # POCET ARGUMENTU FUNKCE
+print(class_factory.__code__.co_argcount)  # POCET ARGUMENTU FUNKCE
 

@@ -18,7 +18,7 @@ class Person:
         return self.age + other.age  # should contains type check ! using isInstance :)
 
     def printall(self):
-        print("Name: % s, age: % d " % (self.name,self.age))
+        print("Name: % s, age: % d " % (self.name, self.age))
 
 bob = Person("Bob", 20)
 alice = Person("Alice", 19)

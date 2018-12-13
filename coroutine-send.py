@@ -1,4 +1,4 @@
-import asyncio #old in 2.7
+import asyncio  # old in 2.7
 
 @asyncio.coroutine
 def regex_matcher(receiver, regex):
@@ -13,7 +13,7 @@ def coro():
     a = yield  'ahoj'
     yield a
 
-c=coro()
+c = coro()
 
 print(type(c))
 # type generator
@@ -34,7 +34,7 @@ def coro():
     print(type(a))
     yield a
 
-c=coro()
+c = coro()
 next(c)
 # ahoj
 c.send('cau')

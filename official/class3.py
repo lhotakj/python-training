@@ -21,4 +21,4 @@ class D(B, C):
         super().__init__(a=1, b=2, x=3)
 
 print(D.mro())
-o=D()
+o = D()

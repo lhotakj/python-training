@@ -12,10 +12,10 @@ import redis
 # yum install redis
 # cat /etc/redis/redis.conf
 # edit bing to 0.0.0.0
-### CentOS/RHEL 7 
+### CentOS/RHEL 7
 # systemctl enable redis
 # systemctl start redis
-### CentOS/RHEL 6 
+### CentOS/RHEL 6
 # chkconfig redis on
 # service redis restart
 
@@ -33,7 +33,7 @@ r.set('myreg', pickle.dumps(prog))
 
 # - NORMAL ----------------------------------
 start1 = datetime.datetime.now().timestamp()
-for i in range(0,10000):
+for i in range(0, 10000):
     prog = re.compile(regex)
     match = prog.search(text)
 
@@ -45,7 +45,7 @@ start2 = datetime.datetime.now().timestamp()
 # prog = re.compile(regex)
 # pickle.dump( prog, open( "./_regex.xxx", "wb" ) )
 
-for i in range(0,10000):
+for i in range(0, 10000):
     prog = pickle.load(open("./_regex.xxx", "rb"))
     # prog = re.compile(regex)
     match = prog.search(text)
@@ -57,7 +57,7 @@ start3 = datetime.datetime.now().timestamp()
 # prog = re.compile(regex)
 # pickle.dump( prog, open( "./_regex.xxx", "wb" ) )
 
-for i in range(0,10000):
+for i in range(0, 10000):
     prog = pickle.load(open("./_regex.xxx", "rb"))
     # prog = re.compile(regex)
     match = r.get('myreg')

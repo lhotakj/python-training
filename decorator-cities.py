@@ -1,15 +1,15 @@
 import sys
 
-mesta={}
+mesta = {}
 
 class Mesta():
 
     def __init__(self):
-        self.mesta={}
+        self.mesta = {}
         try:
             with open('cities.txt') as soubor:
                 for radek in soubor:
-                    kod,mesto = radek.rstrip().split(',', 1)
+                    kod, mesto = radek.rstrip().split(',', 1)
                     if kod in mesta:
                         self.mesta[kod].append(U(mesto))
                     else:
@@ -37,4 +37,4 @@ def pozdrav_me(jmeno):
     return "Ahoj " + jmeno
 
 
-print(pozdrav_me( c.Mesta()['CZ'][0] ))
+print(pozdrav_me( c.Mesta()['CZ'][0]))

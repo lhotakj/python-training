@@ -8,7 +8,7 @@ for line in lines:
 ordered_by_code = sorted(data, key=lambda k: k['code'])
 print(ordered_by_code)
 
-per_code=[]
+per_code = []
 for item in data:
     if item['code'] not in per_code:
         per_code.append(item['code'])
@@ -18,7 +18,7 @@ for country in per_code:
     towns = []
     for item in data:
         if item['code'] == country:
-             towns += item['city']
+            towns += item['city']
 
 
 

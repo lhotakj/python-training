@@ -16,7 +16,7 @@ print(text)
 
 re_pattern = re.compile(r"(\w+)([, .;:-]+)(\w+)([, .;:-]+)(\w+)")
 print(re_pattern.sub(
-    lambda m : "{0}{1}{2}{3}{4}".format(
+    lambda m: "{0}{1}{2}{3}{4}".format(
         m.group(1).upper(),
         "...{0}...".format(m.group(2)),
         m.group(3).lower(),

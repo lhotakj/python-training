@@ -15,7 +15,7 @@ sock.connect(server_address)
 try:
 
     message = '\nThis is the message. It will be repeated.'
-    sys.stdout.write('\nsending `%s`' % message )
+    sys.stdout.write('\nsending `%s`' % message)
     # print >> sys.stderr, 'sending "%s"' % message
     sock.sendall(message.encode())
     sys.stdout.write('sent')

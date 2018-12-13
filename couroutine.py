@@ -1,17 +1,17 @@
 def x():
     yield 10
     yield 20
-y=x()
+y = x()
 next(y)
 
 # returns 10
 next(y)
 # returns 20
 
-l=[x()]
+l = [x()]
 # returns generator object
 
-l=list(x())
+l = list(x())
 l
 
 # returns [10, 20]

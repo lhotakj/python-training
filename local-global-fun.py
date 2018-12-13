@@ -1,7 +1,7 @@
 
 def f(a, L=[]):
-     L.append(a)
-     return L
+    L.append(a)
+    return L
 
 print(f.__defaults__)
 # ([],)

@@ -3,7 +3,7 @@ import asyncio
 @asyncio.coroutine
 def compute(x, y):
     print("Compute %s + %s ..." % (x, y))
-    i=asyncio.sleep(1.0)
+    i = asyncio.sleep(1.0)
     return x + y
 
 @asyncio.coroutine

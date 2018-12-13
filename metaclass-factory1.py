@@ -2,7 +2,7 @@
 
 # define factory
 print('-- create factory -------------')
-factory = type('Factory', (), {'param1':1})
+factory = type('Factory', (), {'param1': 1})
 
 print('factory :      ' + str(factory))
 print('type(factory): ' + str(type(factory)))

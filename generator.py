@@ -2,7 +2,7 @@
 def firstn(n):
     num = 0
     while num < n:
-        yield num # yield like return
+        yield num  # yield like return
         num += 1
 
 

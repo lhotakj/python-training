@@ -1,21 +1,21 @@
 class Person:
-    Person_id=1
+    Person_id = 1
 
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
-        self.cid=Person.Person_id
-        Person.Person_id+=1
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.cid = Person.Person_id
+        Person.Person_id += 1
 
     @classmethod
     def resetPerson(cls):
-        cls.Person_id=1
+        cls.Person_id = 1
 
     #resetPerson=classmethod(resetPerson) #! classmethod reference --> old way
                                          # now used by @classmethod
 
     def printall(self):
-        print ("Name : %s, age : %d, id : %d" % (self.name,self.age,self.cid))
+        print ("Name : %s, age : %d, id : %d" % (self.name, self.age, self.cid))
 
     @classmethod
     def Test(cls):
@@ -30,15 +30,15 @@ class Person:
 
 
 
-p = Person('a',1)
+p = Person('a', 1)
 p.Test()
 Person.TestStatic(1)
 
 
 
-bob=Person("Bob",20)
+bob = Person("Bob", 20)
 bob.resetPerson()
 
-alice=Person("Alice",19)
+alice = Person("Alice", 19)
 bob.printall()
 alice.printall()

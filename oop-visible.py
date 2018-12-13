@@ -14,4 +14,4 @@ print(obj._x)  # 2
 print(dir(obj))
 
 # use this
-print(obj._o__x) # 2
+print(obj._o__x)  # 2
