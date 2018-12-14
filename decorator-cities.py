@@ -37,4 +37,4 @@ def pozdrav_me(jmeno):
     return "Ahoj " + jmeno
 
 
-print(pozdrav_me( c.Mesta()['CZ'][0]))
+print(pozdrav_me(c.Mesta()['CZ'][0]))

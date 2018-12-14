@@ -21,7 +21,7 @@ while True:
     connection, client_address = sock.accept()
     try:
         sys.stdout.write('client connected:' + str(client_address))
-        sys.stdout.flush() 
+        sys.stdout.flush()
         #print >>sys.stderr, 'client connected:', client_address
         while True:
             data = connection.recv(1000)
